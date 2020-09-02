@@ -25,6 +25,9 @@ h1,h2,h3,h4,h5,h6 {
     margin: 0;
     padding: 0;
 }
+.site-container {
+    overflow: hidden;
+}
 .fixed-container {
     max-width: 1240px;
     padding: 0 20px;
@@ -35,6 +38,10 @@ h1,h2,h3,h4,h5,h6 {
     align-items: center;
     padding: 20px 0;
     justify-content: space-between;
+    @media(max-width: 886px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .logo {
     display: flex;
@@ -69,7 +76,11 @@ h1,h2,h3,h4,h5,h6 {
     display: flex;
     align-items: center;
     margin-right: 20px;
+    margin-left: 20px;
     cursor: pointer;
+    @media(max-width: 886px) {
+        margin: 20px 0;
+    }
 
     p {
         display: inline-block;
@@ -136,9 +147,15 @@ address {
 /* ============================first block========================= */
 .first-block {
     background: url(../img/bg-1.jpg) no-repeat center center;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media(max-width: 886px) {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }
 .first-block-content {
-    padding: 100px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -183,6 +200,9 @@ address {
     margin-top: 19px;
     span {
         font-size: 55px;
+        @media(max-width: 886px) {
+            font-size: 45px;
+        }
     }
 }
 .main-form {
@@ -236,21 +256,34 @@ address {
 
 
 /* ============================second-block========================= */
-.second-block-container {
+.second-block {
     padding-top: 80px;
     padding-bottom: 103px;
+    @media(max-width: 826px) {
+        padding: 40px 0;
+    }
 }
 .line {
     text-align: center;
     margin: 23px 0 83px;
+    @media(max-width: 826px) {
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
 }
 .section-title {
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
+    @media(max-width: 826px) {
+        font-size: 24px;
+    }
 }
 
 /* ==============tabs========= */
+.tabs {
+    overflow: scroll;
+}
 .tabs > ul {
     display: flex;
     justify-content: space-between;
@@ -291,8 +324,8 @@ address {
     display: flex;
     margin-top: 40px;
     justify-content: center;
-    @media(max-width: 1250px) {
-        
+    @media(max-width: 812px) {
+        width: 773px;
     }
 }
 .window-title {
@@ -311,6 +344,10 @@ address {
         padding-left: 30px;
         padding-right: 30px;
     }
+    @media(max-width: 812px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
     ul {
         margin-top: 30px;
     }
@@ -321,6 +358,9 @@ address {
         font-size: 14px;
         padding-left: 30px;
         background: url(../img/check.png) no-repeat left center;
+        @media(max-width: 812px) {
+            font-size: 12px;
+        }
     }
 }
 .cold-window {
@@ -377,12 +417,18 @@ address {
 .third-block {
     background-color: #f7f7f7;
     padding-top: 79px;
+    @media(max-width: 826px) {
+        padding-top: 40px;
+    }
 }
 .decoration-types ul {
     display: flex;
     font-size: 20px;
     text-transform: uppercase;
     font-weight: 600;
+    @media(max-width: 826px) {
+        font-size: 16px;
+    }
     li {
         display: flex;       
     }
@@ -395,6 +441,9 @@ address {
             padding-top: 20px;
             text-align: center;
         }  
+        @media(max-width: 826px) {
+            
+        }
     }
 }
 .active-decor {
@@ -421,15 +470,29 @@ address {
             align-self: center;
         }
     }
+    @media(max-width: 826px) {
+        margin-top: 0;
+        padding-bottom: 40px;
+    }
+}
+.example-img {
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
 }
 .decoration-tabs .dec-tabs{
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .materials {
     padding: 30px 66px 0 35px;
     @media(max-width:1237px) {
         padding-right: 30px;
         padding-left: 30px;
+    }
+    @media(max-width: 826px) {
+        padding-right: 0;
     }
 }
 .materials ul {
@@ -443,6 +506,10 @@ address {
         justify-content: center;
         margin-right: 40px;
         margin-bottom: 70px;
+        @media(max-width: 826px) {
+            margin-right: 20px;
+            margin-bottom: 50px;
+        }
     }
     img {
         width: 70px;
@@ -477,8 +544,14 @@ address {
 }
 
 /* ===========4th block========= */
-.forth-block-content {
+.forth-block {
     padding-top: 80px;
+    @media(max-width: 826px) {
+        padding-top: 40px;
+    }
+}
+.forth-block-content {
+    
 }
 .portfolio {
     display: flex;
@@ -541,6 +614,15 @@ address {
 /* ===============6th block=========== */
 .sixth-block {
     padding-top: 80px;
+    @media(max-width: 826px) {
+        padding-top: 40px;
+    }
+}
+.payment {
+    @media(max-width: 969px) {
+        display: flex;
+        justify-content: center;
+    }
 }
 .payment ul {
     display: flex;
@@ -548,13 +630,26 @@ address {
     align-items: center;
     font-size: 20px;
     padding: 88px 60px 88px 0;
+    @media(max-width: 969px) {
+        padding: 40px 40px 40px 0;
+        font-size: 18px;
+        flex-direction: column;
+    }
     li {
         display: flex;
+        @media(max-width: 969px) {
+            margin: 20px 0;
+            width: 100%;
+            align-items: start;
+        }
         img {
             object-fit: none;
         }
         p {
             margin-left: 30px;
+            @media(max-width: 969px) {
+                margin-left: 20px;
+            }
         }
     }
 }
@@ -562,22 +657,39 @@ address {
 /* ================================7th block============================= */
 .seventh-block {
     background: url(../img/bg-2.jpg) no-repeat center center;
+    background-size: cover;
     &-content {
         padding-top: 80px;
         display: flex;
         justify-content: space-between;
         padding-bottom: 80px;
+        @media(max-width: 826px) {
+            padding-bottom: 40px;
+            padding-top: 40px;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &-left {
+        text-align: center;
     }
 }
 .discount {
     font-size: 48px;
     color: #008cce;
     text-transform: uppercase;
+    @media(max-width: 826px) {
+        font-size: 34px;
+    }
     &-subtitle {
         margin-top: 80px;
         margin-bottom: 80px;
         font-size: 24px;
         font-weight: normal;
+        @media(max-width: 826px) {
+            font-size: 20px;
+            margin: 20px 0;
+        }
     }
 }
 .time-counter {
@@ -585,8 +697,11 @@ address {
     border-radius: 10px;
     border: solid 1px #d1d1d1;
     background-color: #ffffff;
-    padding: 21px 25px 25px;
+    padding: 21px 25px 18px;
     text-align: center;
+    @media(max-width: 826px) {
+        margin-bottom: 20px;
+    }
     .countdown-title {
         display: inline-block;
         font-size: 14px;
@@ -603,6 +718,9 @@ address {
 .eigth-block {
     padding-top: 80px;
     padding-bottom: 80px;
+    @media(max-width: 826px) {
+        padding: 40px 0;
+    }
 }
 .places {
     display: flex;
@@ -647,6 +765,10 @@ address {
     color: #fff;
     padding: 85px 0;
     font-size: 30px;
+    @media(max-width: 826px) {
+        padding: 40px 0;
+        font-size: 26px;
+    }
     a {
         margin-left: 30px;
         color: #fff;
